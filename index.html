@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <section>
+      <div>
+        <input id="city" value="Karachi"/>
+        <button id="search" onclick="loadWeather()">Search</button>
+      </div>
+      <h2 id = 'region'></h2>
+      <div id="main">
+        <h2 id="loadingBanner"></h2>
+
+        <img id="cond" />
+        <div>
+          <h2 id="temp"></h2>
+          <h2 id="desc"></h2>
+          <h2 id="wind"></h2>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    var input = document.getElementById("city");
+    // loadWeather()
+    input.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("search").click();
+      }
+    });
+  </script>
+</html>
