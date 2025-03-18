@@ -7,7 +7,7 @@ function loadWeather() {
     document.getElementById('loadingBanner').innerHTML = 'Loading'
     apikey = '084f75a0cb03cfb009f45ad41587c391'
     city = document.getElementById('city').value
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`)
     .then((res) => res.json())
     .then((data) => {
         console.log(data)
